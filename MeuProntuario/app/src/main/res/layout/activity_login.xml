@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.meuprontuario.meuprontuario.LoginActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:titleTextColor="@color/colorBranco"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        app:theme="@style/AppTheme.NoActionBar" />
+
+    <EditText
+        android:id="@+id/txtNomeUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:shadowColor="@color/colorAccent"
+        android:drawableLeft="@drawable/ic_account_circle"
+        android:drawablePadding="10dp"
+        android:ems="14"
+        android:hint="Email ou Usuário"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/txtConfirmaSenha"
+        android:layout_centerHorizontal="true"
+        android:text="pacienteteste@paciente.com" />
+
+    <EditText
+        android:id="@+id/txtConfirmaSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="10dp"
+        android:ems="14"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:layout_above="@+id/textViewEsqueceuSenha"
+        android:text="paciente1" />
+
+    <Switch
+        android:id="@+id/switchLembraSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignBaseline="@+id/textViewEsqueceuSenha"
+        android:layout_alignBottom="@+id/textViewEsqueceuSenha"
+        android:layout_alignStart="@+id/txtConfirmaSenha"
+        android:text="Lembre-me"
+        android:textColor="@color/colorHint" />
+
+    <TextView
+        android:id="@+id/textViewEsqueceuSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="Esqueceu sua senha?"
+        android:textStyle="italic"
+        android:layout_marginBottom="26dp"
+        android:layout_above="@+id/btn_Entrar"
+        android:layout_alignEnd="@+id/txtConfirmaSenha" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_Entrar"
+        android:layout_alignStart="@+id/switchLembraSenha"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:text="cadastrar-se"
+        android:textColor="@color/colorBranco" />
+
+    <Button
+        android:id="@+id/btn_Entrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorBranco"
+        android:layout_marginBottom="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textViewEsqueceuSenha" />
+
+</RelativeLayout>

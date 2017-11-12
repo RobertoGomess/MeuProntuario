@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_grey600_36dp"
+        android:title="@string/title_home"
+        android:enabled="true" />
+    <item
+        android:id="@+id/navigation_emergencia"
+        android:icon="@drawable/ic_emergency_ambulance"
+        android:title="@string/title_emergencia"
+        android:enabled="true" />
+    <item
+        android:id="@+id/navigation_consultas"
+        android:icon="@drawable/ic_fichamedica_grey600_36dp"
+        android:title="@string/title_consultas"
+        android:enabled="true" />
+
+    <item
+        android:id="@+id/navigation_perfil"
+        android:icon="@drawable/ic_account"
+        android:title="Perfil"
+        android:enabled="true" />
+
+</menu>

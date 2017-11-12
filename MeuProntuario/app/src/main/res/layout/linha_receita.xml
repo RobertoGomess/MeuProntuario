@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_shadow_white"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:layout_margin="3dp"
+    android:weightSum="1"
+    >
+
+    <TextView
+        android:id="@+id/txt_data"
+        android:tag="txtData1250"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="Data:"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txt_validade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Validade:"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/txt_data"
+        android:layout_alignStart="@+id/txt_data"
+        android:layout_alignEnd="@+id/txt_data"/>
+
+    <TextView
+        android:id="@+id/txt_doenca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Doença:"
+        android:layout_below="@+id/txt_validade"
+        android:layout_alignStart="@+id/txt_validade"
+        android:layout_alignEnd="@+id/txt_validade" />
+
+    <TextView
+        android:id="@+id/txt_descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Descrição:"
+        android:layout_below="@+id/txt_doenca"
+        android:layout_alignStart="@+id/txt_data"
+        android:layout_alignEnd="@+id/txt_doenca"/>
+
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/colorTransparente"
+        app:srcCompat="@drawable/ic_ver_mais"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/txt_descricao"
+        android:layout_centerHorizontal="true"/>
+
+    <com.like.LikeButton
+        app:icon_type="Star"
+        app:icon_size="22dp"
+        android:id="@+id/star_button"
+        app:liked="false"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:circle_start_color="@color/colorPrimary"
+        app:dots_primary_color="@color/colorAccent"
+        app:dots_secondary_color="@color/colorPrimary"
+        app:circle_end_color="@color/colorAccent"
+        android:layout_alignTop="@+id/imageButton"
+        android:layout_alignEnd="@+id/txt_descricao" />
+
+
+</RelativeLayout>

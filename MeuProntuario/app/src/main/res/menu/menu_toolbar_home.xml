@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/action_Perfil"
+        android:title="Perfil"
+        android:icon="@drawable/ic_account_circle"
+        app:showAsAction="ifRoom" />
+
+    <!-- Configuracoes -->
+    <item
+        android:id="@+id/action_configuracao"
+        android:title="Configurações"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_FeedBack"
+        android:title="Feedback"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Termo"
+        android:title="Termos de uso"
+        app:showAsAction="never" />
+
+
+</menu>

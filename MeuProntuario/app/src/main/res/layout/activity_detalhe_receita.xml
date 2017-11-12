@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="br.com.meuprontuario.meuprontuario.PacoteReceita.DetalheReceitaActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackGroundLayout">
+
+        <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_menu_receitaDetalhe"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        app:title="Detalhe"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+        <com.like.LikeButton
+            app:icon_type="Star"
+            app:icon_size="22dp"
+            android:id="@+id/star_button_detalhe"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:circle_start_color="@color/colorPrimary"
+            app:dots_primary_color="@color/colorAccent"
+            app:dots_secondary_color="@color/colorPrimary"
+            app:circle_end_color="@color/colorAccent"
+            android:layout_below="@+id/toolbar_menu_receitaDetalhe"
+            android:layout_alignEnd="@+id/txt_data_detalhe"
+            android:layout_marginTop="13dp" />
+
+        <TextView
+            android:id="@+id/txt_data_detalhe"
+            android:tag="txtData1250"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Data:"
+            android:padding="10dp"
+            android:textColor="@color/colorBranco"
+            android:layout_marginTop="21dp"
+            android:layout_below="@+id/star_button_detalhe"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/txt_validade_detalhe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Validade:"
+            android:padding="10dp"
+            android:textColor="@color/colorBranco"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/txt_data_detalhe"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/txt_doenca_detalhe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Doença:"
+            android:padding="10dp"
+            android:textColor="@color/colorBranco"
+            android:layout_below="@+id/txt_validade_detalhe"
+            android:layout_alignStart="@+id/txt_validade_detalhe"
+            android:layout_alignEnd="@+id/txt_validade_detalhe" />
+
+        <TextView
+            android:id="@+id/txt_descricao_detalhe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Descrição:"
+            android:padding="10dp"
+            android:textColor="@color/colorBranco"
+            android:layout_below="@+id/txt_doenca_detalhe"
+            android:layout_alignStart="@+id/txt_doenca_detalhe"
+            android:layout_alignEnd="@+id/txt_doenca_detalhe" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButtonLigar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="66dp"
+            android:clickable="true"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_ver_mais"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/txt_descricao_detalhe"
+            android:layout_marginEnd="11dp" />
+
+
+</RelativeLayout>

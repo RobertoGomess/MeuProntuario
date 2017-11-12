@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Meu Prontuário</string>
+    <string name="title_activity_home">home</string>
+    <string name="title_home">Home</string>
+    <string name="title_consultas">Consultas</string>
+    <string name="title_receitas">Receitas</string>
+    <string name="title_perfil">Perfil</string>
+    <string name="title_emergencia">Emergência</string>
+    <string name="key_api_maps">AIzaSyA3vSXjzYSb7z55qvr34-L0hUk4sfc0_Pw</string>
+
+    <string name="profile">PROFILE</string>
+    <string name="feed">FEED</string>
+    <string name="activity">ACTIVITY</string>
+    <string name="settings">SETTINGS</string>
+
+</resources>

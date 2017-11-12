@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.meuprontuario.meuprontuario.HomeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:titleTextColor="@color/colorBranco"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        app:theme="@style/AppTheme.NoActionBar" />
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_home_grey600_36dp"
+        android:layout_above="@+id/btn_emergencia"
+        android:layout_alignStart="@+id/btn_emergencia" />
+
+    <ImageButton
+        android:id="@+id/btn_emergencia"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/ic_emergency_ambulance"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary" />
+
+    <ImageButton
+        android:id="@+id/btn_receitas"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_alignStart="@+id/btn_emergencia"
+        android:layout_below="@+id/btn_emergencia"
+        android:layout_marginTop="22dp"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_fichamedica_grey600_36dp" />
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab
+        id="@+id/tab_home"
+        android:icon="@drawable/ic_home"
+        activeColor="#faffff"
+        title="Home"
+        barColorWhenSelected="#00a4a4"
+        />
+    <tab
+        id="@+id/tab_emergencia"
+        android:icon="@drawable/ic_emergencia"
+        activeColor="#faffff"
+        title="Emergência"
+        barColorWhenSelected="#00a4a4"
+        />
+    <tab
+        id="@+id/tab_receitas"
+        android:icon="@drawable/ic_receitas"
+        activeColor="#faffff"
+        title="Receitas"
+        barColorWhenSelected="#00a4a4"
+        />
+</tabs>
