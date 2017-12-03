@@ -21,7 +21,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme.NoActionBar" >
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -31,8 +31,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,43 +41,29 @@
         <activity
             android:name=".LoginActivity"
             android:label="Bem vindo"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".EsqueceuSenhaActivity"
             android:label="Esqueceu senha"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".HomeActivity"
-            android:label="Meu Prontuário"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".PacoteCadastro.CadastroActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PacoteCadastro.CadastroPasso2Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".PacoteCadastro.CadastroPasso3Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".PacoteReceita.ReceitasActivity"
-            android:label="Minhas receitas"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".PerfilActivity" />
+            android:name=".PacotePaciente.PerfilPacienteActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".PacoteMenu.MenuHomeActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity android:name=".PacoteReceita.DetalheReceitaActivity"></activity>
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".PacoteReceita.DetalheReceitaActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
