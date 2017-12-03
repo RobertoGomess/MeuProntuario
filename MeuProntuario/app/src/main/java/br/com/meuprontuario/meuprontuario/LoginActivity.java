@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
         btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
         btnEntrar = (Button) findViewById(R.id.btn_Entrar);
         //instanciando o Tollbar
-        final Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar_login);
         setSupportActionBar(myToolbar);
 
         //Eventos click

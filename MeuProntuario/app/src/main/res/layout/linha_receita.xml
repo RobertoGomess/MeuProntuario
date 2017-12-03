@@ -5,78 +5,79 @@
     android:layout_height="wrap_content"
     android:background="@drawable/layout_shadow_white"
     android:orientation="vertical"
-    android:paddingBottom="15dp"
-    android:layout_margin="3dp"
-    android:weightSum="1"
-    >
+    android:layout_margin="8dp"
+>
 
     <TextView
         android:id="@+id/txt_data"
-        android:tag="txtData1250"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:text="Data:"
-        android:layout_marginTop="15dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:tag="txtData1250"
+        android:text="Data:"
+        android:textColor="@color/colorBranco" />
 
     <TextView
         android:id="@+id/txt_validade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Validade:"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/txt_data"
+        android:layout_alignEnd="@+id/txt_data"
         android:layout_alignStart="@+id/txt_data"
-        android:layout_alignEnd="@+id/txt_data"/>
+        android:layout_below="@+id/txt_data"
+        android:layout_marginTop="15dp"
+        android:text="Validade:"
+        android:textColor="@color/colorBranco" />
 
     <TextView
         android:id="@+id/txt_doenca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt_validade"
+        android:layout_alignStart="@+id/txt_validade"
+        android:layout_below="@+id/txt_validade"
         android:layout_marginTop="15dp"
         android:text="Doença:"
-        android:layout_below="@+id/txt_validade"
-        android:layout_alignStart="@+id/txt_validade"
-        android:layout_alignEnd="@+id/txt_validade" />
+        android:textColor="@color/colorBranco" />
 
     <TextView
         android:id="@+id/txt_descricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt_doenca"
+        android:layout_alignStart="@+id/txt_data"
+        android:layout_below="@+id/txt_doenca"
         android:layout_marginTop="15dp"
         android:text="Descrição:"
-        android:layout_below="@+id/txt_doenca"
-        android:layout_alignStart="@+id/txt_data"
-        android:layout_alignEnd="@+id/txt_doenca"/>
-
+        android:textColor="@color/colorBranco" />
 
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:background="@color/colorTransparente"
-        app:srcCompat="@drawable/ic_ver_mais"
-        android:layout_marginTop="5dp"
         android:layout_below="@+id/txt_descricao"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorTransparente"
+        android:padding="5dp"
+        app:srcCompat="@drawable/ic_ver_mais" />
 
     <com.like.LikeButton
-        app:icon_type="Star"
-        app:icon_size="22dp"
         android:id="@+id/star_button"
-        app:liked="false"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:layout_alignEnd="@+id/txt_descricao"
+        android:layout_alignTop="@+id/imageButton"
+        app:circle_end_color="@color/colorAccent"
         app:circle_start_color="@color/colorPrimary"
         app:dots_primary_color="@color/colorAccent"
         app:dots_secondary_color="@color/colorPrimary"
-        app:circle_end_color="@color/colorAccent"
-        android:layout_alignTop="@+id/imageButton"
-        android:layout_alignEnd="@+id/txt_descricao" />
+        app:icon_size="22dp"
+        app:icon_type="Star"
+        app:liked="false" />
 
 
 </RelativeLayout>

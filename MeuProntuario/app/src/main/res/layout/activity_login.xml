@@ -9,15 +9,12 @@
     tools:context="br.com.meuprontuario.meuprontuario.LoginActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
+        android:id="@+id/my_toolbar_login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        app:titleTextColor="@color/colorBranco"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        app:theme="@style/AppTheme.NoActionBar" />
+        app:title="@string/title_perfil"
+        android:theme="@style/AppTheme.Toolbar"
+        />
 
     <EditText
         android:id="@+id/txtNomeUsuario"

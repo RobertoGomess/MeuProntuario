@@ -10,7 +10,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,14 +22,13 @@ import com.roughike.bottombar.OnTabSelectListener;
 import br.com.meuprontuario.meuprontuario.EmergenciaFragment;
 import br.com.meuprontuario.meuprontuario.HomeFragment;
 import br.com.meuprontuario.meuprontuario.PacoteReceita.ReceitasFragment;
-import br.com.meuprontuario.meuprontuario.PerfilActivity;
+import br.com.meuprontuario.meuprontuario.PacotePaciente.PerfilPacienteActivity;
 import br.com.meuprontuario.meuprontuario.R;
 
 public class MenuHomeActivity extends AppCompatActivity {
 
     private Toolbar myToolbar;
     private BottomBar  bottomBar;
-    private ScrollView scrollView;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -38,8 +36,6 @@ public class MenuHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_home);
         iniciarTollBar();
-
-        scrollView = (ScrollView) findViewById(R.id.scrollView_receitas);
 
         bottomBar = (BottomBar) findViewById(R.id.bottomBar);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
@@ -66,19 +62,6 @@ public class MenuHomeActivity extends AppCompatActivity {
             }
         });
 
-        scrollView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-            @Override
-            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                if (scrollY>oldScrollY && scrollY>200){
-                    bottomBar.setVisibility(View.INVISIBLE);
-                }
-                else if(scrollY<(oldScrollY-3)){
-                    bottomBar.setVisibility(View.VISIBLE);
-                    scrollView.getMaxScrollAmount();
-                }
-            }
-        });
-
     }
 
     // Menu icons are inflated just as they were with actionbar
@@ -93,7 +76,7 @@ public class MenuHomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_Perfil:
-                Intent intent = new Intent(this,PerfilActivity.class);
+                Intent intent = new Intent(this,PerfilPacienteActivity.class);
                 startActivity(intent);
                 break;
             case R.id.action_configuracao:
