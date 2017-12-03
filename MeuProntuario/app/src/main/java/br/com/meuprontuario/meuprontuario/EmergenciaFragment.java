@@ -2,14 +2,19 @@ package br.com.meuprontuario.meuprontuario;
 
 
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +29,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.security.Permission;
+import java.security.PermissionCollection;
 
 import br.com.meuprontuario.meuprontuario.PacoteMenu.MenuHomeActivity;
 import br.com.meuprontuario.meuprontuario.Uteis.UteisJava;
@@ -53,9 +61,29 @@ public class EmergenciaFragment extends Fragment implements OnMapReadyCallback,
             @Override
             public void onClick(View v) {
                 try {
-                    Uri uri = Uri.parse("tel:192");
-                    Intent i = new Intent(Intent.ACTION_CALL, uri);
-                    startActivity(i);
+                    if (ContextCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        // Permission to access the location is missing.
+                        PermissionUtils.requestPermission((MenuHomeActivity) getActivity(), 1,
+                                Manifest.permission.CALL_PHONE);
+
+                    }else if(ContextCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE)
+                            == PackageManager.PERMISSION_GRANTED){
+                        Uri uri = Uri.parse("tel:192");
+                        Intent i = new Intent(Intent.ACTION_CALL, uri);
+                        startActivity(i);
+                    }
+
+
+
+                   /* if (UteisJava.realizarLigacao(context,(MenuHomeActivity) getActivity())){
+                        Uri uri = Uri.parse("tel:192");
+                        Intent i = new Intent(Intent.ACTION_CALL, uri);
+                        startActivity(i);
+                    }else{
+                       Toast.makeText(context,"Sem permissão para realizar ligações.",Toast.LENGTH_LONG).show();
+                    }*/
+
                 } catch (Exception e) {
                     Toast.makeText(getContext(), "Não foi possível realizar a ligação. " + e.getMessage(), Toast.LENGTH_LONG).show();
                 }
