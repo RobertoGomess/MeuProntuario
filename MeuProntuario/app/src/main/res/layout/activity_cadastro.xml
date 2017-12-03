@@ -12,129 +12,136 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        app:titleTextColor="@color/colorBranco"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        app:theme="@style/AppTheme.NoActionBar">
+        android:layout_alignParentTop="true"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme.Toolbar">
 
     </android.support.v7.widget.Toolbar>
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            tools:context="br.com.meuprontuario.meuprontuario.PacoteCadastro.CadastroActivity">
+            android:layout_marginTop="50dp">
 
-            <TextView
-                android:id="@+id/txtViewInforAcesso"
+            <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="19dp"
-                android:text="Informações de acesso"
-                android:textAlignment="center"
-                android:textSize="25dp" />
+                android:layout_height="match_parent"
+                tools:context="br.com.meuprontuario.meuprontuario.PacoteCadastro.CadastroActivity">
 
-            <EditText
-                android:id="@+id/txtNomeUsuario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:drawableLeft="@drawable/ic_account_circle"
-                android:ems="10"
-                android:hint="Nome de Usuário"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="22dp"
-                tools:layout_editor_absoluteY="16dp"
-                android:layout_below="@+id/txtViewInforAcesso"
-                android:layout_alignParentStart="true" />
+                <TextView
+                    android:id="@+id/txtViewInforAcesso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="19dp"
+                    android:text="Informações de acesso"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
 
-            <EditText
-                android:id="@+id/txtEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/txtNomeUsuario"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/ic_mail_outline_36dp"
-                android:ems="10"
-                android:hint="E-mail"
-                android:inputType="textEmailAddress"
-                tools:layout_editor_absoluteX="22dp"
-                tools:layout_editor_absoluteY="74dp" />
+                <EditText
+                    android:id="@+id/txtNomeUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtViewInforAcesso"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:drawableLeft="@drawable/ic_account_circle"
+                    android:ems="10"
+                    android:hint="Nome de Usuário"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="16dp" />
 
-            <EditText
-                android:id="@+id/txtSenha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:drawableLeft="@drawable/ic_lock"
-                android:ems="10"
-                android:hint="Senha"
-                android:inputType="textPassword"
-                tools:layout_editor_absoluteX="22dp"
-                tools:layout_editor_absoluteY="127dp"
-                android:layout_below="@+id/txtEmail"
-                android:layout_alignParentStart="true" />
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtNomeUsuario"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_mail_outline_36dp"
+                    android:ems="10"
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="74dp" />
 
-            <EditText
-                android:id="@+id/txtConfirmaSenha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_below="@+id/txtSenha"
-                android:layout_centerHorizontal="true"
-                android:drawableLeft="@drawable/ic_lock"
-                android:ems="10"
-                android:hint="Repita a senha"
-                android:inputType="textPassword"
-                tools:layout_editor_absoluteX="22dp"
-                tools:layout_editor_absoluteY="182dp" />
+                <EditText
+                    android:id="@+id/txtSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtEmail"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:ems="10"
+                    android:hint="Senha"
+                    android:inputType="textPassword"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="127dp" />
 
-            <Switch
-                android:id="@+id/switchTermos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <EditText
+                    android:id="@+id/txtConfirmaSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSenha"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:ems="10"
+                    android:hint="Repita a senha"
+                    android:inputType="textPassword"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="182dp" />
 
-                android:layout_alignStart="@+id/txtConfirmaSenha"
-                android:layout_below="@+id/txtConfirmaSenha"
-                android:layout_marginTop="20dp"
-                android:shadowColor="@color/colorPrimaryDark"
-                android:textColor="@color/colorHint"
-                android:text="Confirmo que li a política de privacidade e aceito os termos de uso."
-                android:layout_alignEnd="@+id/txtConfirmaSenha" />
+                <Switch
+                    android:id="@+id/switchTermos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-            <Button
-                android:id="@+id/btnCadastrarPasso2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:padding="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Cadastrar-se"
-                android:textColor="@color/colorBranco"
-                android:layout_below="@+id/switchTermos"
-                android:layout_alignEnd="@+id/switchTermos"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="20dp" />
+                    android:layout_alignEnd="@+id/txtConfirmaSenha"
+                    android:layout_alignStart="@+id/txtConfirmaSenha"
+                    android:layout_below="@+id/txtConfirmaSenha"
+                    android:layout_marginTop="20dp"
+                    android:shadowColor="@color/colorPrimaryDark"
+                    android:text="Confirmo que li a política de privacidade e aceito os termos de uso."
+                    android:textColor="@color/colorHint" />
 
-        </RelativeLayout>
 
-    </ScrollView>
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnCadastrarPasso2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/ic_proximo"
+            android:text="Cadastrar-se"
+            android:textColor="@color/colorBranco"
+            app:fabSize="normal" />
+
+    </RelativeLayout>
+
+
 </RelativeLayout>
 
 

@@ -1,6 +1,7 @@
 package br.com.meuprontuario.meuprontuario.PacoteCadastro;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -20,7 +21,7 @@ public class CadastroPasso2Activity extends AppCompatActivity {
     private EditText txtTelefone;
     private EditText txtCpf;
     private EditText txtDataNascimento;
-    private Button btnConcluir;
+    private FloatingActionButton btnConcluir;
 
 
     @Override
@@ -34,7 +35,7 @@ public class CadastroPasso2Activity extends AppCompatActivity {
         txtTelefone = (EditText) findViewById(R.id.txtTelefone);
         txtCpf = (EditText) findViewById(R.id.txtCpf);
         txtDataNascimento = (EditText) findViewById(R.id.txtDataNascimento);
-        btnConcluir = (Button) findViewById(R.id.btnConcluir);
+        btnConcluir = (FloatingActionButton) findViewById(R.id.btnConcluir);
         //instanciando ToolBar
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);

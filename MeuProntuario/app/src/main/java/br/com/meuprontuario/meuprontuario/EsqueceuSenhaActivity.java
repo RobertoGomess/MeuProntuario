@@ -1,19 +1,14 @@
 package br.com.meuprontuario.meuprontuario;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import br.com.meuprontuario.meuprontuario.Uteis.NotificationUtil;
@@ -25,7 +20,7 @@ import br.com.meuprontuario.meuprontuario.Uteis.NotificationUtil;
 public class EsqueceuSenhaActivity extends AppCompatActivity {
 
     private EditText txtEsqueceuEmail;
-    private Button btnEsqueceuSenha;
+    private FloatingActionButton btnEsqueceuSenha;
     private Context context = this;
 
     @Override
@@ -37,7 +32,7 @@ public class EsqueceuSenhaActivity extends AppCompatActivity {
         //instanciando componentes
 
         txtEsqueceuEmail = (EditText) findViewById(R.id.txtEsqueceuEmail);
-        btnEsqueceuSenha = (Button) findViewById(R.id.btnEsqueceuSenha);
+        btnEsqueceuSenha = (FloatingActionButton) findViewById(R.id.btnEsqueceuSenha);
 
         //pegando valores da Loginactivity
 

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,143 +6,153 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="br.com.meuprontuario.meuprontuario.PacoteCadastro.CadastroPasso2Activity">
+    tools:context="br.com.meuprontuario.meuprontuario.PacoteCadastro.CadastroActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        app:titleTextColor="@color/colorBranco"
-        app:theme="@style/AppTheme.NoActionBar"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:elevation="4dp"
+        android:theme="@style/AppTheme.Toolbar">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp">
+        android:layout_height="match_parent">
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            tools:context="br.com.meuprontuario.meuprontuario.PacoteCadastro.CadastroPasso3Activity">
+            android:layout_marginTop="50dp">
 
-            <TextView
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:text="Endereço"
-                android:textAlignment="center"
-                android:textSize="25sp" />
+            <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="br.com.meuprontuario.meuprontuario.PacoteCadastro.CadastroActivity">
 
-            <EditText
-                android:id="@+id/editText_rua"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView2"
-                android:ems="10"
-                android:hint="Rua"
-                android:drawableLeft="@drawable/ic_adress"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:inputType="textPersonName" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Endereço"
+                    android:textAlignment="center"
+                    android:textSize="25sp" />
 
-            <EditText
-                android:layout_marginTop="10dp"
-                android:id="@+id/editText_cep"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editText_rua"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:ems="10"
-                android:hint="CEP"
-                android:inputType="textPersonName" />
+                <EditText
+                    android:id="@+id/editText_rua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_adress"
+                    android:ems="10"
+                    android:hint="Rua"
+                    android:inputType="textPersonName" />
 
-            <EditText
-                android:layout_marginTop="10dp"
-                android:id="@+id/editText_bairro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editText_cep"
-                android:ems="10"
-                android:hint="Bairro"
-                android:inputType="textPersonName" />
+                <EditText
+                    android:id="@+id/editText_cep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText_rua"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="CEP"
+                    android:inputType="textPersonName" />
 
-            <EditText
-                android:id="@+id/editText_numero"
-                android:layout_width="wrap_content"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editText_bairro"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:hint="Numero"
-                android:inputType="textPersonName" />
+                <EditText
+                    android:id="@+id/editText_bairro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText_cep"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Bairro"
+                    android:inputType="textPersonName" />
 
-            <EditText
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/editText_cidade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editText_numero"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:hint="Cidade"
-                android:drawableLeft="@drawable/ic_location_city"
-                android:inputType="textPersonName" />
+                <EditText
+                    android:id="@+id/editText_numero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText_bairro"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Numero"
+                    android:inputType="textPersonName" />
 
-            <EditText
+                <EditText
+                    android:id="@+id/editText_cidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText_numero"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_location_city"
+                    android:ems="10"
+                    android:hint="Cidade"
+                    android:inputType="textPersonName" />
 
-                android:id="@+id/editText_estado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Estado"
-                android:inputType="textPersonName"
-                android:layout_below="@+id/editText_cidade"
-                android:layout_alignEnd="@+id/editText_cidade"
-                android:layout_alignStart="@+id/editText_cidade" />
+                <EditText
 
-            <Button
-                android:id="@+id/btn_enviar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
-                android:text="Enviar"
-                android:textColor="#FFF"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_below="@+id/editText_estado"
-                android:layout_alignEnd="@+id/editText_estado" />
+                    android:id="@+id/editText_estado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/editText_cidade"
+                    android:layout_alignStart="@+id/editText_cidade"
+                    android:layout_below="@+id/editText_cidade"
+                    android:ems="10"
+                    android:hint="Estado"
+                    android:inputType="textPersonName" />
 
-        </RelativeLayout>
-    </ScrollView>
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnCadastrarPasso3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/ic_proximo"
+            android:text="Cadastrar-se"
+            android:textColor="@color/colorBranco"
+            app:fabSize="normal" />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
+
+
+

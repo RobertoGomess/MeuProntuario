@@ -1,86 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical"
+    tools:context="br.com.meuprontuario.meuprontuario.EsqueceuSenhaActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        app:titleTextColor="@color/colorBranco"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        app:theme="@style/AppTheme.NoActionBar">
+        android:layout_alignParentTop="true"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme.Toolbar">
 
     </android.support.v7.widget.Toolbar>
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_toolbar">
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp">
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textViewInformacao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:textSize="18dp"
-                android:text="Informe seu email, para que possamos te ajudar a recuperar sua senha."
-                android:layout_marginTop="54dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:id="@+id/textViewInformacao2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:textSize="18dp"
-                android:layout_marginTop="35dp"
-                android:text="Depois que você informar o seu email, você receberá um email da nossa equipe, com as informações necessárias para recuperar sua senha."
-                android:layout_below="@+id/textViewInformacao"
-                android:layout_centerHorizontal="true" />
-
-            <EditText
-                android:id="@+id/txtEsqueceuEmail"
+            <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/textViewInformacao2"
-                android:layout_marginTop="40dp"
-                android:drawableLeft="@drawable/ic_account_circle"
-                android:drawablePadding="10dp"
-                android:ems="14"
-                android:hint="Email ou Usuário"
-                android:inputType="textEmailAddress"
-                android:shadowColor="@color/colorAccent" />
+                android:layout_height="match_parent"
+                tools:context="br.com.meuprontuario.meuprontuario.PacoteCadastro.CadastroActivity">
 
-            <Button
-                android:id="@+id/btnEsqueceuSenha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/txtEsqueceuEmail"
-                android:layout_marginEnd="40dp"
-                android:layout_marginTop="75dp"
-                android:layout_marginBottom="20dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="10dp"
-                android:text="Continuar"
-                android:textColor="@color/colorBranco" />
+                <TextView
+                    android:id="@+id/textViewInformacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="54dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Informe seu email, para que possamos te ajudar a recuperar sua senha."
+                    android:textSize="18dp" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/textViewInformacao2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewInformacao"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Depois que você informar o seu email, você receberá um email da nossa equipe, com as informações necessárias para recuperar sua senha."
+                    android:textSize="18dp" />
 
-    </ScrollView>
+                <EditText
+                    android:id="@+id/txtEsqueceuEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewInformacao2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="40dp"
+                    android:drawableLeft="@drawable/ic_account_circle"
+                    android:drawablePadding="10dp"
+                    android:ems="14"
+                    android:hint="Email ou Usuário"
+                    android:inputType="textEmailAddress"
+                    android:shadowColor="@color/colorAccent" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnEsqueceuSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/ic_enviar"
+            android:text="Cadastrar-se"
+            android:textColor="@color/colorBranco"
+            app:fabSize="normal" />
+
+    </RelativeLayout>
+
+
 </RelativeLayout>
+
+
+

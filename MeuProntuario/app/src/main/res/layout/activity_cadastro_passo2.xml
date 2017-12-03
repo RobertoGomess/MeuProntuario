@@ -13,109 +13,111 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        app:titleTextColor="@color/colorBranco"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        app:theme="@style/AppTheme.NoActionBar">
+        android:layout_alignParentTop="true"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme.Toolbar" />
 
-    </android.support.v7.widget.Toolbar>
-
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_toolbar">
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            tools:context="br.com.meuprontuario.meuprontuario.PacoteCadastro.CadastroPasso2Activity">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/txtvInforPessoa"
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="Informações Pessoais"
-                android:textAlignment="center"
-                android:textSize="25sp"
-                tools:layout_editor_absoluteX="69dp"
-                tools:layout_editor_absoluteY="16dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_height="match_parent"
+                tools:context="br.com.meuprontuario.meuprontuario.PacoteCadastro.CadastroPasso2Activity">
 
-            <EditText
-                android:drawableLeft="@drawable/ic_account_circle"
-                android:id="@+id/txtNome"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:ems="10"
-                android:hint="Nome"
-                android:inputType="textPersonName"
-                android:layout_below="@+id/txtvInforPessoa" />
+                <TextView
+                    android:id="@+id/txtvInforPessoa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Informações Pessoais"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    tools:layout_editor_absoluteX="69dp"
+                    tools:layout_editor_absoluteY="16dp" />
 
-            <EditText
-                android:drawableLeft="@drawable/ic_local_phone"
-                android:id="@+id/txtTelefone"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:ems="10"
-                android:hint="Telefone"
-                android:inputType="phone"
-                android:layout_below="@+id/txtNome" />
+                <EditText
+                    android:id="@+id/txtNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/txtvInforPessoa"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_account_circle"
+                    android:ems="10"
+                    android:hint="Nome"
+                    android:inputType="textPersonName" />
 
-            <EditText
-                android:drawableLeft="@drawable/ic_cpf"
-                android:id="@+id/txtCpf"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:ems="10"
-                android:hint="CPF"
-                android:inputType="number"
-                android:layout_below="@+id/txtTelefone" />
+                <EditText
+                    android:id="@+id/txtTelefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/txtNome"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_local_phone"
+                    android:ems="10"
+                    android:hint="Telefone"
+                    android:inputType="phone" />
 
-            <EditText
-                android:id="@+id/txtDataNascimento"
-                android:layout_width="348dp"
-                android:layout_height="50dp"
-                android:layout_alignStart="@+id/txtCpf"
-                android:layout_below="@+id/txtCpf"
-                android:layout_marginTop="18dp"
-                android:drawableLeft="@drawable/ic_data"
-                android:ems="10"
-                android:hint="Data de Nasicmento"
-                android:inputType="date"
-                android:layout_alignEnd="@+id/txtCpf" />
+                <EditText
+                    android:id="@+id/txtCpf"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/txtTelefone"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_cpf"
+                    android:ems="10"
+                    android:hint="CPF"
+                    android:inputType="number" />
 
-            <Button
-                android:id="@+id/btnConcluir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="concluir cadastro"
-                android:textColor="@color/colorBranco"
-                android:layout_below="@+id/txtDataNascimento"
-                android:layout_alignEnd="@+id/txtDataNascimento"
-                android:layout_marginTop="100dp"
-                android:layout_marginBottom="20dp" />
+                <EditText
+                    android:id="@+id/txtDataNascimento"
+                    android:layout_width="348dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@+id/txtCpf"
+                    android:layout_alignStart="@+id/txtCpf"
+                    android:layout_below="@+id/txtCpf"
+                    android:layout_marginTop="18dp"
+                    android:drawableLeft="@drawable/ic_data"
+                    android:ems="10"
+                    android:hint="Data de Nasicmento"
+                    android:inputType="date" />
+            </RelativeLayout>
 
-        </RelativeLayout>
+        </ScrollView>
 
-    </ScrollView>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnConcluir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/ic_proximo"
+            android:text="Cadastrar-se"
+            android:textColor="@color/colorBranco"
+            app:fabSize="normal" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
