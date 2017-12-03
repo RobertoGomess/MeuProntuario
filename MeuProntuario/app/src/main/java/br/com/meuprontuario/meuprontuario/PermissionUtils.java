@@ -21,16 +21,11 @@ public abstract class PermissionUtils {
      * be shown to the user, displays a dialog that triggers the request.
      */
     public static void requestPermission(AppCompatActivity activity, int requestId,
-                                         String permission, boolean finishActivity) {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(activity, permission)) {
-            // Display a dialog with rationale.
-            PermissionUtils.RationaleDialog.newInstance(requestId, finishActivity)
-                    .show(activity.getSupportFragmentManager(), "dialog");
-        } else {
+                                         String permission) {
+
             // Location permission has not been granted yet, request it.
             ActivityCompat.requestPermissions(activity, new String[]{permission}, requestId);
 
-        }
     }
 
     /**

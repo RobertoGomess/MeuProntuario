@@ -85,7 +85,7 @@ public class UteisJava {
                 != PackageManager.PERMISSION_GRANTED) {
             // Permission to access the location is missing.
             PermissionUtils.requestPermission(activity, LOCATION_PERMISSION_REQUEST_CODE,
-                    Manifest.permission.ACCESS_FINE_LOCATION, true);
+                    Manifest.permission.ACCESS_FINE_LOCATION);
         } else if (googleMap != null) {
             // Access to the location has been granted to the app.
             googleMap.setMyLocationEnabled(true);
@@ -100,7 +100,7 @@ public class UteisJava {
                 != PackageManager.PERMISSION_GRANTED) {
             // Permission to access the location is missing.
             PermissionUtils.requestPermission(activity, LOCATION_PERMISSION_REQUEST_CODE,
-                    Manifest.permission.ACCESS_FINE_LOCATION, true);
+                    Manifest.permission.ACCESS_FINE_LOCATION);
         } else if (googleMap != null) {
 
             LocationManager locationManager = (LocationManager)
@@ -132,6 +132,5 @@ public class UteisJava {
             return !TextUtils.isEmpty(locationProviders);
         }
     }
-
 
 }
